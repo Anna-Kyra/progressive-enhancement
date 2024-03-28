@@ -6,7 +6,12 @@ Deze CSS hoef je niet aan te passen; dit zijn algemene stijlen voor elke pagina.
 Gebruik het <style> element in het bestand van het component, waar ook wat hints staan.
 
 */
-
+* {
+	margin: 0;
+	padding: 0;
+	
+	box-sizing: border-box;
+}
 
 
 body {
@@ -19,6 +24,8 @@ body {
 
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.6;
+
+	
 }
 
 h1 {
