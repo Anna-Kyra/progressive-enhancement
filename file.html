@@ -13,13 +13,14 @@
 			}
 
 			form {
-				background: var(--blue);
+				/* background: var(--blue-50); */
 				width: 60%;
 				margin: auto;
 				padding: 2em;
 				display: flex;
 				flex-direction: column;
 				align-items: start;
+				gap: 1em;
 			}
 
 			fieldset {
@@ -30,14 +31,27 @@
 				align-items: center;
 				background: var(--upload);
 				background-size: cover;
+				background-position: center;
+				border: .25em var(--blue-50) solid;
+				border-radius: 1em;
+				position: relative;
+				overflow: auto;
+
+				:focus-visible {
+					outline: 3px solid var(--blue);
+				}
 			}
 
 			label {
-				background-color: goldenrod;
 				position: absolute;
+				display: block;
+				/* width: 100%;
+				height: 100%; */
+				/* background-color: aqua; */
+				justify-content: center;
+				text-align: center;
 
 			}
-
 
 			input[type="file"] {
 				all: unset;
@@ -47,7 +61,17 @@
 				object-fit: cover;
 				cursor: pointer;
 				opacity: 0;
+
+				:focus-visible {
+					outline: 3px solid var(--blue);
+					opacity: 100%;
+				}
 			}
+
+			input[type="file"]:focus-visible + fieldset {
+					outline: 3px solid var(--blue);
+					opacity: 100%;
+				} 
 
 			/* Hint: Denk niet te ingewikkeld */
 		</style>
