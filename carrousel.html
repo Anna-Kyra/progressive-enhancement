@@ -14,15 +14,33 @@
 				background-color: goldenrod;
 				display: flex;
 				overflow: auto;
+				/* flex-direction: column; */
+				scroll-behavior: smooth;
+				scroll-snap-type: x mandatory;
 			}
 
 			article {
+				align-items: center;
 				width: 50em;
 				height: 30em;
 				background-color: blueviolet;
-				
+				display: flex;
+				justify-content: center;
 
+				flex: 40em 0 0;
+				flex-basis: 70vw;
+
+				scroll-snap-align: center;
 			}
+
+			article:nth-last-of-type(2n) {
+				background-color: var(--green);
+			}
+
+			article:nth-last-of-type(3n + 1) {
+				background-color: var(--yellow);
+			}
+
 		</style>
 		<script type="module">
 			/* Schrijf hier eventueel je client-side JavaScript */
